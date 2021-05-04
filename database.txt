@@ -1,0 +1,36 @@
+2. Silahkan tampilkan data dari setiap table
+
+=>  	- SELECT * FROM districts
+	- SELECT * FROM provinces
+	- SELECT * from regencies
+	- SELECT * FROM villages
+
+3. Silahkan ganti nama tabel “provinces” menjadi “provinsi”
+
+=>	- ALTER TABLE provinces RENAME provinsi
+
+4. Silahkan ganti nama tabel “regencies” menjadi “kabupaten_kota”
+
+=>	- ALTER TABLE regencies RENAME kabupaten_kota
+
+5. Silahkan ganti nama table “districts” menjadi “kecamatan”
+
+=>	- ALTER TABLE districts RENAME kecamatan
+
+6. silahkan ganti nama table “villages” menjadi “desa”
+
+=>	- ALTER TABLE villages RENAME desa
+
+7. Seleksi data sehingga akan menampilkan hasil format tabel seperti berikut :
+
+=>	- SELECT desa.id AS id_desa, desa.name AS desa, provinsi.name AS provinsi FROM provinsi JOIN kabupaten_kota ON provinsi.id = kabupaten_kota.province_id JOIN kecamatan ON kecamatan.regency_id = kabupaten_kota.id JOIN desa ON desa.district_id = kecamatan.id WHERE provinsi.name = "ACEH"
+
+8. Seleksi data sehingga akan menampilkan hasil format tabel seperti berikut :
+
+=>	- SELECT kecamatan.id AS id_kecamatan, kecamatan.name AS kecamatan, provinsi.name AS provinsi FROM provinsi JOIN kabupaten_kota ON provinsi.id = kabupaten_kota.province_id JOIN kecamatan ON kecamatan.regency_id = kabupaten_kota.id WHERE kabupaten_kota.name = "KABUPATEN SIMEULUE"
+
+9. Seleksi data sehingga akan menampilkan hasil format tabel seperti berikut :
+
+=>	- SELECT kabupaten_kota.id AS id_kabupaten_kota, kabupaten_kota.name AS kabupaten_kota, provinsi.name AS provinsi FROM provinsi JOIN kabupaten_kota ON provinsi.id = kabupaten_kota.province_id WHERE provinsi.name = "ACEH"
+
+10. Silahkan export database lalu diberi nama “nama_anda.sql”
